@@ -1,6 +1,6 @@
 # About me
 
-Hi, this is Atishay.
+Hi, this is Atishay Jain.
 
 A bit of information about me:
 
@@ -26,4 +26,4 @@ Nobody talks about this enough - you can just build software for yourself. Not t
 
 ## Your gadget doesn't need your email
 
-Karpathy wrote about [why he loves the calculator](https://karpathy.bearblog.dev/i-love-calculator/) - it turns on, it does math, done. No login, no app, no bullshit. You bought it, it's yours. That used to just be how things worked. Now your air monitor won't tell you the air quality until you make an account. Your TV is collecting data while you watch it. We slowly went from owning things to renting access to things we already paid for. The calculator just does the thing. More stuff should just do the thing.
+Karpathy wrote about [why he loves the calculator](https://karpathy.bearblog.dev/i-love-calculator/) - it turns on, it does math, done. No login, no app, no BS. You bought it, it's yours. That used to just be how things worked. Now your air monitor won't tell you the air quality until you make an account. Your TV is collecting data while you watch it. We slowly went from owning things to renting access to things we already paid for. The calculator just does the thing. More stuff should just do the thing.
