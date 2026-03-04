@@ -6,12 +6,13 @@ A bit of information about me:
 
 1. Passionate about DevSecOps.
 2. GCP Certified Cloud Associate Engineer and AWS Certified Cloud Practitioner.
-3. Active long distance runner — 6+ years and counting.
-4. Ask me about: technology, self hosting, running, education (more specifically study abroad), or anything else you have in mind.
-5. Current pursuits: getting back into the gym and learning more in DevSecOps.
-6. Hardware combination of choice: Mac and Android.
-7. Reach out: [Email](mailto:atishayextras23@gmail.com) · [LinkedIn](https://www.linkedin.com/in/atishay23/).
-8. TryHackMe: [tryhackme.com/p/atishay23](https://tryhackme.com/p/atishay23).
+3. Master's degree in Computer Software Engineering.
+4. Active long distance runner — 6+ years and counting.
+5. Ask me about: technology, self hosting, running, education (more specifically study abroad), or anything else you have in mind.
+6. Current pursuits: getting back into the gym and learning more in DevSecOps.
+7. Hardware combination of choice: Mac and Android.
+8. Reach out: [Email](mailto:atishayextras23@gmail.com) · [LinkedIn](https://www.linkedin.com/in/atishay23/).
+9. TryHackMe: [tryhackme.com/p/atishay23](https://tryhackme.com/p/atishay23).
 
 ## Motivation for this Blog
 
