@@ -1,0 +1,253 @@
+:root {
+  --bg: #ffffff;
+  --fg: #111827; /* near-black */
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --link: #0f766e; /* subtle teal */
+  --link-hover: #115e59;
+  --code-bg: #f6f7f9;
+  --selection: rgba(15, 118, 110, 0.18);
+
+  --container: 760px;
+  --radius: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    "Apple Color Emoji",
+    "Segoe UI Emoji";
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+}
+
+::selection {
+  background: var(--selection);
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  min-width: 0;
+}
+
+.brand__home {
+  text-decoration: none;
+  color: var(--fg);
+  font-weight: 650;
+  letter-spacing: 0.02em;
+}
+
+.brand__home:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.brand__muted {
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: flex-end;
+}
+
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+.site-nav a:hover {
+  color: var(--fg);
+  border-bottom-color: var(--border);
+}
+
+/* Main */
+main.container {
+  padding-top: 28px;
+  padding-bottom: 56px;
+}
+
+.markdown {
+  font-size: 16.5px;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+  line-height: 1.25;
+  margin: 1.8em 0 0.6em;
+  letter-spacing: 0.01em;
+}
+
+.markdown h1 {
+  margin-top: 0;
+  font-size: 2.05rem;
+}
+
+.markdown h2 {
+  font-size: 1.45rem;
+}
+
+.markdown h3 {
+  font-size: 1.15rem;
+}
+
+.markdown p {
+  margin: 0.8em 0;
+}
+
+.markdown a {
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(15, 118, 110, 0.28);
+}
+
+.markdown a:hover {
+  color: var(--link-hover);
+  border-bottom-color: rgba(17, 94, 89, 0.45);
+}
+
+.markdown hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+
+.markdown blockquote {
+  margin: 16px 0;
+  padding: 8px 14px;
+  border-left: 3px solid var(--border);
+  color: var(--muted);
+  background: #fafafa;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.markdown ul,
+.markdown ol {
+  padding-left: 1.25em;
+  margin: 0.8em 0;
+}
+
+.markdown li {
+  margin: 0.2em 0;
+}
+
+.markdown code {
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
+    "Courier New",
+    monospace;
+  font-size: 0.92em;
+  background: var(--code-bg);
+  padding: 0.15em 0.35em;
+  border-radius: 6px;
+  border: 1px solid rgba(17, 24, 39, 0.06);
+}
+
+.markdown pre {
+  overflow: auto;
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  background: var(--code-bg);
+  border: 1px solid rgba(17, 24, 39, 0.06);
+}
+
+.markdown pre code {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.codeblock {
+  overflow: auto;
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  background: var(--code-bg);
+  border: 1px solid rgba(17, 24, 39, 0.06);
+}
+
+.markdown img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 18px 0;
+}
+
+/* Small screens */
+@media (max-width: 520px) {
+  .site-header .container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .site-nav {
+    justify-content: flex-start;
+  }
+}

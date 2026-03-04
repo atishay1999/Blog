@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>Atishay — Notes</title>
+    <meta
+      name="description"
+      content="A minimal, markdown-first personal site."
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Markdown renderer (tiny + no build tooling) -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="brand">
+          <a class="brand__home" href="#top" aria-label="Go to top">
+            Atishay
+          </a>
+          <span class="brand__muted">— personal notes</span>
+        </div>
+
+        <nav class="site-nav" aria-label="On-page navigation">
+          <a href="#about">About</a>
+          <a href="#links">Links</a>
+          <a href="#highlights">Highlights</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top" class="container">
+      <article id="content" class="markdown" aria-busy="true">
+        <p class="muted">Loading…</p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span class="muted">Made to be edited in Markdown.</span>
+      </div>
+    </footer>
+
+    <script>
+      const contentEl = document.getElementById("content");
+
+      marked.setOptions({
+        gfm: true,
+        breaks: false,
+      });
+
+      async function loadMarkdown() {
+        try {
+          const res = await fetch("./content.md", { cache: "no-store" });
+          if (!res.ok) throw new Error(`Failed to load content.md (${res.status})`);
+          const md = await res.text();
+          contentEl.innerHTML = marked.parse(md);
+          contentEl.setAttribute("aria-busy", "false");
+        } catch (err) {
+          contentEl.innerHTML =
+            `<h1>Couldn’t load content</h1>` +
+            `<p class="muted">Make sure you’re serving this folder (not opening the HTML file directly), so the browser can fetch <code>content.md</code>.</p>` +
+            `<pre class="codeblock">${String(err)}</pre>`;
+          contentEl.setAttribute("aria-busy", "false");
+        }
+      }
+
+      loadMarkdown();
+    </script>
+  </body>
+</html>
